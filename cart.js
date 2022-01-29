@@ -34,7 +34,7 @@ const cart = [
 ]
 
 //CODE HERE
-const summedPrice = cart.reduce((a, c) => a + c.price);
+const summedPrice = cart.reduce((a, c) => a + c.price, 0);
 // console.log (summedPrice);
 
 
@@ -80,14 +80,13 @@ const calcFinalPrice = (cartTotal, couponValue, tax) => (tax + 1) * cartTotal - 
 
 /*
     TEXT ANSWER HERE
-    Name because you sould know what they call themselves and that will be a string
+    Name because you sould know what they call themselves (string)
 
-    Phone number because you want to be able to sell that info to call centers and that will be a number
+    Phone number because you want to be able to sell that info to call centers (number)
 
-    email so that you can send them lots of spam that will be a string
+    email so that you can send them lots of spam (string)
 
-    Good costomer or not just because, and that will be a boolean
-*/
+    Good costomer or not just because (boolean)
 
 /*
     Now, create a customer object following your own

@@ -130,15 +130,15 @@ const foodArr = [
     price: 13.99,
     category: `Specialty`,
     poularity: 2,
-    rating: 9,
+    rating: 4,
     tags: [`peperoni`, `ham`, `sausage`] 
     },
     {
     name: `Cheeze`,
     price: 9.99,
     category: `Boring`,
-    poularity: 2,
-    rating: 9,
+    poularity: 5,
+    rating: 5,
     tags: [`cheeze`, 'extra cheeze'] 
     }
 ]                                        
@@ -158,7 +158,7 @@ const foodArr = [
 
 //CODE HERE
 
-// const filteredFood = foodArr.filter((tag) => tag.includes(`S`));
+const filteredFood = foodArr.filter(meal => meal.tags.includes(`extra cheeze`));
 // console.log (filteredFood);
 
 
@@ -205,11 +205,10 @@ const foodArr = [
 //CODE HERE
 const filterByProperty = (property, number, type) => {
     if (type === `above`){
-        let foodFilter = foodArr.filter(tag => tag.property > number);
+        return foodArr.filter(meal => meal[property] > number);
     }else{
-        let foodFilter = foodArr.filter(tag => tag.poularity < number);
+        return foodArr.filter(meal => meal[property] < number);
     };
-    return foodFilter    
 };
 
 
@@ -221,4 +220,4 @@ const filterByProperty = (property, number, type) => {
 */
 
 //CODE HERE
-console.log (filterByProperty([`price`], 10, `above`));
+console.log (filterByProperty(`rating`, 8, `above`));
